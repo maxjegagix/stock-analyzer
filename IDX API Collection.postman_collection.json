@@ -1,0 +1,450 @@
+{
+  "info": {
+    "_postman_id": "f5f74621-dabf-44b1-8f5b-12bc536e8e5f",
+    "name": "IDX API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "19459290"
+  },
+  "item": [
+    {
+      "name": "Get Company Profiles",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://www.idx.co.id/primary/ListedCompany/GetCompanyProfiles?emitenType=s&start=0&length=9999",
+          "protocol": "https",
+          "host": [
+            "www",
+            "idx",
+            "co",
+            "id"
+          ],
+          "path": [
+            "primary",
+            "ListedCompany",
+            "GetCompanyProfiles"
+          ],
+          "query": [
+            {
+              "key": "emitenType",
+              "value": "s"
+            },
+            {
+              "key": "start",
+              "value": "0"
+            },
+            {
+              "key": "length",
+              "value": "9999"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Company Profile Detail",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://www.idx.co.id/primary/ListedCompany/GetCompanyProfilesDetail?KodeEmiten={{kodeEmiten}}&language=en-us",
+          "protocol": "https",
+          "host": [
+            "www",
+            "idx",
+            "co",
+            "id"
+          ],
+          "path": [
+            "primary",
+            "ListedCompany",
+            "GetCompanyProfilesDetail"
+          ],
+          "query": [
+            {
+              "key": "KodeEmiten",
+              "value": "{{kodeEmiten}}"
+            },
+            {
+              "key": "language",
+              "value": "en-us"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Issued History",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://www.idx.co.id/primary/ListingActivity/GetIssuedHistory?kodeEmiten={{kodeEmiten}}&start=0&length=9999",
+          "protocol": "https",
+          "host": [
+            "www",
+            "idx",
+            "co",
+            "id"
+          ],
+          "path": [
+            "primary",
+            "ListingActivity",
+            "GetIssuedHistory"
+          ],
+          "query": [
+            {
+              "key": "kodeEmiten",
+              "value": "{{kodeEmiten}}"
+            },
+            {
+              "key": "start",
+              "value": "0"
+            },
+            {
+              "key": "length",
+              "value": "9999"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Profile Announcement",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://www.idx.co.id/primary/ListedCompany/GetProfileAnnouncement?KodeEmiten={{kodeEmiten}}&indexFrom=0&pageSize=10&dateFrom={{dateFrom}}&dateTo={{dateTo}}&lang=en&keyword=",
+          "protocol": "https",
+          "host": [
+            "www",
+            "idx",
+            "co",
+            "id"
+          ],
+          "path": [
+            "primary",
+            "ListedCompany",
+            "GetProfileAnnouncement"
+          ],
+          "query": [
+            {
+              "key": "KodeEmiten",
+              "value": "{{kodeEmiten}}"
+            },
+            {
+              "key": "indexFrom",
+              "value": "0"
+            },
+            {
+              "key": "pageSize",
+              "value": "10"
+            },
+            {
+              "key": "dateFrom",
+              "value": "{{dateFrom}}"
+            },
+            {
+              "key": "dateTo",
+              "value": "{{dateTo}}"
+            },
+            {
+              "key": "lang",
+              "value": "en"
+            },
+            {
+              "key": "keyword",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Calendar",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://www.idx.co.id/primary/Home/GetCalendar?range={{kodeEmiten}}&date={{date}}",
+          "protocol": "https",
+          "host": [
+            "www",
+            "idx",
+            "co",
+            "id"
+          ],
+          "path": [
+            "primary",
+            "Home",
+            "GetCalendar"
+          ],
+          "query": [
+            {
+              "key": "range",
+              "value": "{{kodeEmiten}}"
+            },
+            {
+              "key": "date",
+              "value": "{{date}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Financial Report",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://www.idx.co.id/primary/ListedCompany/GetFinancialReport?periode=audit&year={{year}}&indexFrom=0&pageSize=1000&reportType=rdf&kodeEmiten={{kodeEmiten}}",
+          "protocol": "https",
+          "host": [
+            "www",
+            "idx",
+            "co",
+            "id"
+          ],
+          "path": [
+            "primary",
+            "ListedCompany",
+            "GetFinancialReport"
+          ],
+          "query": [
+            {
+              "key": "periode",
+              "value": "audit"
+            },
+            {
+              "key": "year",
+              "value": "{{year}}"
+            },
+            {
+              "key": "indexFrom",
+              "value": "0"
+            },
+            {
+              "key": "pageSize",
+              "value": "1000"
+            },
+            {
+              "key": "reportType",
+              "value": "rdf"
+            },
+            {
+              "key": "kodeEmiten",
+              "value": "{{kodeEmiten}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Name Change History",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://www.idx.co.id/primary/ListedCompany/GetPerubahanNamaHistory?KodeEmiten={{kodeEmiten}}&Year={{year}}",
+          "protocol": "https",
+          "host": [
+            "www",
+            "idx",
+            "co",
+            "id"
+          ],
+          "path": [
+            "primary",
+            "ListedCompany",
+            "GetPerubahanNamaHistory"
+          ],
+          "query": [
+            {
+              "key": "KodeEmiten",
+              "value": "{{kodeEmiten}}"
+            },
+            {
+              "key": "Year",
+              "value": "{{year}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Core Business History",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://www.idx.co.id/primary/ListedCompany/GetCoreBusinessHistory?KodeEmiten={{kodeEmiten}}&Year={{year}}",
+          "protocol": "https",
+          "host": [
+            "www",
+            "idx",
+            "co",
+            "id"
+          ],
+          "path": [
+            "primary",
+            "ListedCompany",
+            "GetCoreBusinessHistory"
+          ],
+          "query": [
+            {
+              "key": "KodeEmiten",
+              "value": "{{kodeEmiten}}"
+            },
+            {
+              "key": "Year",
+              "value": "{{year}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Shareholder History",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://www.idx.co.id/primary/ListedCompany/GetPemegangSahamHistory?KodeEmiten={{kodeEmiten}}&Year={{year}}",
+          "protocol": "https",
+          "host": [
+            "www",
+            "idx",
+            "co",
+            "id"
+          ],
+          "path": [
+            "primary",
+            "ListedCompany",
+            "GetPemegangSahamHistory"
+          ],
+          "query": [
+            {
+              "key": "KodeEmiten",
+              "value": "{{kodeEmiten}}"
+            },
+            {
+              "key": "Year",
+              "value": "{{year}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Controlling Shareholder History",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://www.idx.co.id/primary/ListedCompany/GetPemegangSahamPengendaliHistory?KodeEmiten={{kodeEmiten}}&Year={{year}}",
+          "protocol": "https",
+          "host": [
+            "www",
+            "idx",
+            "co",
+            "id"
+          ],
+          "path": [
+            "primary",
+            "ListedCompany",
+            "GetPemegangSahamPengendaliHistory"
+          ],
+          "query": [
+            {
+              "key": "KodeEmiten",
+              "value": "{{kodeEmiten}}"
+            },
+            {
+              "key": "Year",
+              "value": "{{year}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Cash Dividend",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://www.idx.co.id/primary/ListedCompany/GetDividenTunai?KodeEmiten={{kodeEmiten}}&Year={{year}}",
+          "protocol": "https",
+          "host": [
+            "www",
+            "idx",
+            "co",
+            "id"
+          ],
+          "path": [
+            "primary",
+            "ListedCompany",
+            "GetDividenTunai"
+          ],
+          "query": [
+            {
+              "key": "KodeEmiten",
+              "value": "{{kodeEmiten}}"
+            },
+            {
+              "key": "Year",
+              "value": "{{year}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Stock Dividend",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://www.idx.co.id/primary/ListedCompany/GetDividenSaham?KodeEmiten={{kodeEmiten}}&Year={{year}}",
+          "protocol": "https",
+          "host": [
+            "www",
+            "idx",
+            "co",
+            "id"
+          ],
+          "path": [
+            "primary",
+            "ListedCompany",
+            "GetDividenSaham"
+          ],
+          "query": [
+            {
+              "key": "KodeEmiten",
+              "value": "{{kodeEmiten}}"
+            },
+            {
+              "key": "Year",
+              "value": "{{year}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
