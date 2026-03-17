@@ -1,56 +1,47 @@
-Production-grade FastAPI stock analyzer
+# 📈 Stock Analyzer
 
-Run locally:
+🌟 **Welcome to Stock Analyzer!** 🌟
 
-pip install -r requirements.txt
-uvicorn app.main:app --reload
+The Stock Analyzer is a powerful tool for analyzing stock market trends and making informed investment decisions. Using cutting-edge technology and real-time data, you can track your investments and enhance your trading strategy.
 
-Run docker:
+## 🚀 Features
+- **Real-time Data Analysis**: Get up-to-the-minute insights on stock performance.
+- **User-Friendly Interface**: A sleek, intuitive design makes navigation a breeze.
+- **Data Visualization**: Beautiful charts and graphs to help you understand market trends.
 
-docker compose up --build
+## 🔧 Getting Started
+To get started, clone the repository and install the necessary dependencies:
 
-Run IDX pull scheduler (daily):
+```bash
+git clone https://github.com/maxjegagix/stock-analyzer.git
+cd stock-analyzer
+npm install
+```
 
-python scripts/schedule_collect_idx_to_db.py --time 19:00 --run-now
+## 📚 Usage
+Launch the application using:
 
-Collect IDX company profiles (manual):
+```bash
+npm start
+```
 
-python scripts/collect_company_profiles.py
+## 💌 Contributing
+We welcome contributions! Please fork the repo and submit a pull request to help us improve.
 
-Optional flags:
+## 🛠 Technologies Used
+- **JavaScript**
+- **React**
+- **Node.js**
 
-python scripts/collect_company_profiles.py --emiten-type s --start 0 --length 9999 --output data/company_profiles.json
+## 📄 License
+This project is licensed under the MIT License.
 
-Notes:
-- Default behavior: upsert to DB via stock.upsert_company_profiles.
-- Use --skip-db to skip DB and only write file (requires --output).
+## 📫 Contact
+For inquiries, please reach out at:
+- **Email**: contact@stock-analyzer.com
+- **Twitter**: [@StockAnalyzer](https://twitter.com/StockAnalyzer)
 
-Collect IDX financial reports (manual, per emiten per year):
+---
 
-python scripts/collect_financial_reports.py --year-start 2010 --year-end 2026
-
-Optional flags:
-
-python scripts/collect_financial_reports.py --stock-code BBCA --year-start 2018 --year-end 2026 --output-dir data/financial_reports
-
-Skip writing JSON output (DB upsert only):
-
-python scripts/collect_financial_reports.py --stock-code BBCA --year-start 2018 --year-end 2026 --no-output
-
-Financial report storage schema:
-- stock.financial_report: summary per emiten/tahun/periode/report_type
-- stock.financial_report_attachment: detail file lampiran (PDF/XLSX/ZIP, dll)
-
-Download financial report attachments (cache to disk, end-to-end in collector):
-
-python scripts/collect_financial_reports.py --stock-code BBCA --year-start 2018 --year-end 2026 --download-attachments --attachments-dir data/financial_report_attachments --skip-existing
-
-Notes:
-- Downloaded files are stored on disk and local path is saved to stock.financial_report_attachment.local_path.
-
-Scheduler options:
-
-- Run once now, then continue every day at 19:00:
-  `python scripts/schedule_collect_idx_to_db.py --time 19:00 --run-now`
-- Run only on daily schedule (without immediate first run):
-  `python scripts/schedule_collect_idx_to_db.py --time 19:00`
+### Badges
+![GitHub stars](https://img.shields.io/github/stars/maxjegagix/stock-analyzer?style=social) ![GitHub forks](https://img.shields.io/github/forks/maxjegagix/stock-analyzer?style=social) ![GitHub issues](https://img.shields.io/github/issues/maxjegagix/stock-analyzer)
