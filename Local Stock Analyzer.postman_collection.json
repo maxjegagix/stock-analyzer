@@ -1,0 +1,111 @@
+{
+  "info": {
+    "_postman_id": "6b1b4d2d-8c9f-4b4b-9a1a-11f6c3b7c1a1",
+    "name": "Local Stock Analyzer",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Recommendations - Momentum MA Breakout",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/stocks/recommendations/momentum_ma_breakout?limit=5&min_price=500&min_avg_volume_20d=200000",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "stocks",
+            "recommendations",
+            "momentum_ma_breakout"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "5"
+            },
+            {
+              "key": "min_price",
+              "value": "500"
+            },
+            {
+              "key": "min_avg_volume_20d",
+              "value": "200000"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Backtest - Momentum MA Breakout",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/stocks/recommendations/momentum_ma_breakout/backtest?start_date=2026-03-01&end_date=2026-03-16&min_price=500&min_avg_volume_20d=200000&limit_per_day=20",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "stocks",
+            "recommendations",
+            "momentum_ma_breakout",
+            "backtest"
+          ],
+          "query": [
+            {
+              "key": "start_date",
+              "value": "2026-03-01"
+            },
+            {
+              "key": "end_date",
+              "value": "2026-03-16"
+            },
+            {
+              "key": "min_price",
+              "value": "500"
+            },
+            {
+              "key": "min_avg_volume_20d",
+              "value": "200000"
+            },
+            {
+              "key": "limit_per_day",
+              "value": "20"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8000"
+    }
+  ]
+}

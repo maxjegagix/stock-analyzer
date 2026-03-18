@@ -30,6 +30,18 @@ uvicorn app.main:app --reload
 
 ✨ The API will be available at `http://localhost:8000`
 
+### 📮 Postman (Import API Collection via URL)
+
+1. Start the API server:
+   ```bash
+   uvicorn app.main:app --reload
+   ```
+2. In Postman: **Import → Link**
+3. Use this URL:
+   ```
+   http://localhost:8000/openapi.json
+   ```
+
 ---
 
 ## 🐳 Docker Setup
